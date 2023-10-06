@@ -261,3 +261,19 @@ INNER JOIN portfolioproject.covidvaccinations va
 ON de.location=va.location AND de.date=va.date
 WHERE de.location='United States';
 
+/* Several coutnries' Infection Rate Data Series */
+SELECT location, date, population, total_cases, total_cases / population * 100 AS InfectionRate
+FROM portfolioproject.coviddeaths
+WHERE location = 'Brazil';
+
+SELECT location, date, population, total_cases, total_cases / population * 100 AS InfectionRate
+FROM portfolioproject.coviddeaths
+WHERE location = 'India';
+
+SELECT location, date, population, total_cases, total_cases / population * 100 AS InfectionRate
+FROM portfolioproject.coviddeaths
+WHERE location = 'China';
+
+SELECT location, date, population, total_cases, total_cases / population * 100 AS InfectionRate
+FROM portfolioproject.coviddeaths
+WHERE location = 'Kazakhstan';
